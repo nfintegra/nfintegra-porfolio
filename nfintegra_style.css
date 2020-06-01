@@ -15,7 +15,8 @@ section{
     background-color: silver;
     height: 100%;
     width: 100%;
-    position: absolute;
+    position: relative;
     display: flex;
     align-items: center;
+    transform: translateX();
 }
