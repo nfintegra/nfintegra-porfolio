@@ -18,5 +18,5 @@ section{
     position: relative;
     display: flex;
     align-items: center;
-    transform: translateX();
+    justify-content: center;
 }
