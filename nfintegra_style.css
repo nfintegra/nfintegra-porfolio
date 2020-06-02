@@ -12,11 +12,16 @@ section{
 }
 
 #content{
-    background-color: silver;
+    background-color: white;
     height: 100%;
     width: 100%;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#bgcirc{
+    scale:3,3;
+
 }
