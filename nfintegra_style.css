@@ -21,14 +21,15 @@ section{
     justify-content: center;
 }
 
-svg{
-    width: 100%;
-    height: 100%;
+#logo{
+    width: 25%;
+    height: 25%;
+    transform: translate();
     position: relative;
 }
 
-#bgcirc{
-    transform: scale(1);
+#mpath{
+    transform: translate();
     transform-origin: center;
 
 }
