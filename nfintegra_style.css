@@ -22,14 +22,8 @@ section{
 }
 
 #logo{
-    width: 25%;
-    height: 25%;
-    transform: translate();
-    position: relative;
+    top: 0%;
+    left: 0%;
+    position: absolute;
 }
 
-#mpath{
-    transform: translate();
-    transform-origin: center;
-
-}

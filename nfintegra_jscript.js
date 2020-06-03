@@ -1,4 +1,4 @@
-var path = anime.path('#mpath path');
+let path = anime.path('#mpath path');
 
 anime({
   targets: '#logo',
