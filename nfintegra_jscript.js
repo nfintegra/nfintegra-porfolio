@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded',
 
   })
   .add({
-    targets: 'bgcirc',
+    targets: '#bgcirc',
     scale: ['5','0'],
   }) )
 
