@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded',
 
   })
   .add({
-    targets: 'bgcirc';
-    scale: ['5','0'];
+    targets: 'bgcirc',
+    scale: ['5','0'],
   }) )
 
 /*let path = anime.path('#mpath path');
