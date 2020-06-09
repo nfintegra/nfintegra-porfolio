@@ -11,14 +11,11 @@ section{
     overflow: hidden;
 }
 
-#content{
+#container{
     background-color: white;
     height: 100%;
     width: 100%;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 /*#logo{
@@ -32,12 +29,19 @@ section{
     position: fixed;
 }*/
 
+#logo{
+position: absolute;
+}
+
 #logo_grp{
-    position: absolute;
+top: 5%;
+margin-left: 5em;
+margin-right: 5em;
+margin-bottom: 5em;
 }
 
 #bgcirc{
-    transform: scale(5);
-    transform-origin: center;
+    transform: scale(1);
+    position: relative;
 }
 
