@@ -1,4 +1,13 @@
-let path = anime.path('#mpath path');
+document.addEventListener('DOMContentLoaded', 
+  ()=> anime.timeline({
+
+  })
+  .add({
+    targets: 'bgcirc';
+    scale: ['5','0'];
+  }) )
+
+/*let path = anime.path('#mpath path');
 
 anime({
   targets: '#logo_grp',
@@ -8,3 +17,6 @@ anime({
   duration: 20000,
   loop: true
 });
+*/
+
+
