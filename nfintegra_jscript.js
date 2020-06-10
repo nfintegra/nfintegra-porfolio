@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded',
   })
   .add({
     targets: '#bgcirc',
-    scale: ['3','1'],
+    scale: ['6','1'],
 
-    duration: 50000,
+    duration: 25000,
     loop: true
   }) );
 
