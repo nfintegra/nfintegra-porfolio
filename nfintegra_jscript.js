@@ -5,9 +5,15 @@ document.addEventListener('DOMContentLoaded',
   .add({
     targets: '#bgcirc',
     scale: ['6','1'],
-
-    duration: 25000,
-    loop: true
+    easing: 'spring(2, 20, 12, 0)',
+    duration: 50000,
+  })
+  
+  .add({
+    targets: '#bgcirc',
+    scale: ['6','1'],
+    easing: 'spring(2, 20, 12, 0)',
+    duration: 50000,
   }) );
 
 /*let path = anime.path('#mpath path');

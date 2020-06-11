@@ -23,8 +23,12 @@ position: absolute;
 }
 
 #bgcirc{
-    transform: scale(2);
+    transform: scale();
     transform-origin: 20% 20%;
     position: relative;
 }
+
+/*#fillcir_grp{
+    fill-opacity: 0;
+}*/
 
