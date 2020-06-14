@@ -10,6 +10,12 @@ document.addEventListener('DOMContentLoaded',
     duration: '50000',
   }) 
   .add({
+    targets:'#cstroke1',
+    strokeDashoffset: [anime.strokeDashoffset, 0],
+    easing: 'easeInOutQuad',
+    duration: 5000,
+  }, '-=600')
+  .add({
     targets: '.fillcir',
     fill: ['rgba(255,255,255,0)', '#ffffff'],
     easing: 'linear',
@@ -23,7 +29,22 @@ document.addEventListener('DOMContentLoaded',
     duration: '1200',
   }) );
 
-/*let path = anime.path('#mpath path');
+/*
+    begin: (anim)=> {
+      document.getElementById('cstroke1', ()=>anime.timeline({
+      })
+      .add({
+        targets:'#cstroke1',
+        strokeDashoffset: [anime.strokeDashoffset, 0],
+        easing: 'easeInOutQuad',
+        duration: 5000,
+      }, '-=600')
+      );
+
+    }
+
+
+let path = anime.path('#mpath path');
 
 anime({
   targets: '#logo_grp',

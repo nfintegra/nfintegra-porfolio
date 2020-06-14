@@ -28,6 +28,20 @@ position: absolute;
     position: relative;
 }
 
+.cover_stroke{
+    fill:none;
+    stroke:#FFFFFF;
+    stroke-width:3;
+    stroke-linecap:round;
+    stroke-miterlimit:10;
+    z-index:1;
+}
+
+#cstroke1 path{
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+} 
+
 /*#fillcir_grp{
     fill-opacity: 0;
 }*/
