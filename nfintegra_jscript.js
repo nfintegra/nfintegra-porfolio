@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded',
     duration: '50000',
   }) 
   .add({
-    targets:'#cstroke1',
+    targets:'#logo.path.cstroke1',
     strokeDashoffset: [anime.strokeDashoffset, 0],
     easing: 'easeInOutQuad',
     duration: 5000,
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded',
 
 /*
     begin: (anim)=> {
-      document.getElementById('cstroke1', ()=>anime.timeline({
+      document.getElementById('#logo.path.cstroke1', ()=>anime.timeline({
       })
       .add({
         targets:'#cstroke1',

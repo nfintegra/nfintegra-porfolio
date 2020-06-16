@@ -37,7 +37,7 @@ position: absolute;
     z-index:1;
 }
 
-#cstroke1 path{
+#logo.path.cstroke1{
     stroke-dasharray: 1000;
     stroke-dashoffset: 0;
 } 
