@@ -37,7 +37,7 @@ position: absolute;
     z-index:1;
 }
 
-#logo.logo_grp.path.cstroke1.cover_stroke{
+svg#logo g#logo_grp path#cstroke1.cover_stroke{
     stroke-dasharray: 1000;
     stroke-dashoffset: 0;
 } 

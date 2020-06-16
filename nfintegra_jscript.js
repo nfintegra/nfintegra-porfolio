@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded',
     duration: '50000',
   }) 
   .add({
-    targets:'#logo #logo_grp path #cstroke1 .cover_stroke',
+    targets:'svg#logo, g#logo_grp, path#cstroke1.cover_stroke',
     strokeDashoffset: [anime.strokeDashoffset, 0],
     easing: 'easeInOutQuad',
     duration: 5000,
