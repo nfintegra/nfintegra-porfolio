@@ -1,3 +1,6 @@
+const stroke1 = document.querySelector('svg#logo g#logo_grp path#cstroke1.cover_stroke');
+const stroke2 = document.querySelector('svg#logo g#logo_grp path#cstroke2.cover_stroke');
+
 document.addEventListener('DOMContentLoaded', 
   ()=> anime.timeline({
 
@@ -10,10 +13,10 @@ document.addEventListener('DOMContentLoaded',
     duration: '50000',
   }) 
   .add({
-    targets:'svg#logo, g#logo_grp, path#cstroke1.cover_stroke',
-    strokeDashoffset: [anime.strokeDashoffset, 0],
+    targets: stroke1,
+    strokeDashoffset: [anime.strokeDashoffset, -82],
     easing: 'easeInOutQuad',
-    duration: 5000,
+    duration: '5000',
   }, '-=600')
   .add({
     targets: '.fillcir',

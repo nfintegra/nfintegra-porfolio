@@ -34,15 +34,17 @@ position: absolute;
     stroke-width:3;
     stroke-linecap:round;
     stroke-miterlimit:10;
+    stroke-dasharray: 100;
+    stroke-dashoffset: -82;
     z-index:1;
 }
 
-svg#logo g#logo_grp path#cstroke1.cover_stroke{
+/*svg#logo g#logo_grp path#cstroke1{
     stroke-dasharray: 1000;
     stroke-dashoffset: 0;
 } 
 
-/*#fillcir_grp{
+#fillcir_grp{
     fill-opacity: 0;
 }*/
 
