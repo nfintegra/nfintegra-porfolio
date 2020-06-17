@@ -1,5 +1,7 @@
 const stroke1 = document.querySelector('svg#logo g#logo_grp path#cstroke1.cover_stroke');
 const stroke2 = document.querySelector('svg#logo g#logo_grp path#cstroke2.cover_stroke');
+const covercirc = document.querySelector('svg#logo g#logo_grp path#covercirc');
+var loopCirc = 0;
 
 document.addEventListener('DOMContentLoaded', 
   ()=> anime.timeline({
@@ -7,10 +9,16 @@ document.addEventListener('DOMContentLoaded',
   })
 
   .add({
-    targets: '#bgcirc',
-    scale: ['6','1'],
-    easing: 'spring(2, 20, 12, 0)',
-    duration: '50000',
+    targets: '#covercirc',
+    strokeDashoffset: [anime.strokeDashoffset, -236],
+    easing: 'easeInOutQuad',
+    duration: '20000',
+    loop: true,
+    direction: 'alternate',
+    easing: 'linear',
+    loopBegin: function(anim) {
+      loopCirc++;
+    }
   }) 
   .add({
     targets: stroke1,
