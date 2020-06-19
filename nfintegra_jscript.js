@@ -1,7 +1,7 @@
+const covercirc = document.querySelector('svg#logo g#logo_grp path#covercirc');
 const stroke1 = document.querySelector('svg#logo g#logo_grp path#cstroke1.cover_stroke');
 const stroke2 = document.querySelector('svg#logo g#logo_grp path#cstroke2.cover_stroke');
-const covercirc = document.querySelector('svg#logo g#logo_grp path#covercirc');
-var loopCirc = 0;
+const stroke3 = document.querySelector('svg#logo g#logo_grp line#lstroke3');
 
 document.addEventListener('DOMContentLoaded', 
   ()=> anime.timeline({
@@ -12,20 +12,30 @@ document.addEventListener('DOMContentLoaded',
     targets: '#covercirc',
     strokeDashoffset: [anime.strokeDashoffset, -236],
     easing: 'easeInOutQuad',
-    duration: '20000',
-    loop: true,
-    direction: 'alternate',
+    duration: '5400',
     easing: 'linear',
-    loopBegin: function(anim) {
-      loopCirc++;
-    }
   }) 
   .add({
     targets: stroke1,
     strokeDashoffset: [anime.strokeDashoffset, -82],
-    easing: 'easeInOutQuad',
+    easing: 'linear',
     duration: '5000',
-  }, '-=600')
+  }, 400)
+
+  .add({
+    targets: stroke2,
+    strokeDashoffset: [anime.strokeDashoffset, -82],
+    easing: 'linear',
+    duration: '2900',
+  }, 1000)
+
+  .add({
+    targets: stroke3,
+    strokeDashoffset: [anime.strokeDashoffset, -82],
+    easing: 'linear',
+    duration: '5000',
+  }, '-=2500')
+
   .add({
     targets: '.fillcir',
     fill: ['rgba(255,255,255,0)', '#ffffff'],
@@ -38,7 +48,7 @@ document.addEventListener('DOMContentLoaded',
     stroke: ['rgba(0,0,0,0)', '#000000'],
     easing: 'linear',
     duration: '1200',
-  }) );
+  },'-=200') );
 
 /*
     begin: (anim)=> {

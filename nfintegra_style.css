@@ -46,6 +46,13 @@ position: absolute;
     stroke-dashoffset: 237;
     z-index:1;
 }
+
+#lstroke3{
+    stroke-width:2;
+    stroke-dasharray: 236;
+    stroke-dashoffset: 0;
+    z-index:1;
+}
 /*svg#logo g#logo_grp path#cstroke1{
     stroke-dasharray: 1000;
     stroke-dashoffset: 0;
