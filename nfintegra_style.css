@@ -56,13 +56,8 @@ position: absolute;
     z-index:1;
 }
 
-
-/*svg#logo g#logo_grp path#cstroke1{
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 0;
-} 
-
-#fillcir_grp{
-    fill-opacity: 0;
-}*/
+.rotatecir{
+    transform: rotate(0deg);
+    transform-origin: 20% 22%;
+}
 

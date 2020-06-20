@@ -7,6 +7,12 @@ document.addEventListener('DOMContentLoaded',
   ()=> anime.timeline({
 
   })
+  .add({
+    targets: '#fillcir1 #strokecir',
+    fill: ['rgba(255,255,255,0)', '#ffffff'],
+    easing: 'linear',
+    duration: '250',
+  }) 
 
   .add({
     targets: '#covercirc',
@@ -36,12 +42,6 @@ document.addEventListener('DOMContentLoaded',
     duration: '5000',
   }, '-=2500')
 
-  .add({
-    targets: '.fillcir',
-    fill: ['rgba(255,255,255,0)', '#ffffff'],
-    easing: 'linear',
-    duration: '250',
-  }) 
   .add({
     targets: '.strokecir',
     fill: ['rgba(255,255,255,0)', '#ffffff'],
