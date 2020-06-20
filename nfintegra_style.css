@@ -41,6 +41,8 @@ position: absolute;
 }
 
 #covercirc{
+   transform: rotate(90deg);
+    transform-origin: 20% 22.25%;
     stroke-width:3;
     stroke-dasharray: 236;
     stroke-dashoffset: 237;
@@ -53,6 +55,8 @@ position: absolute;
     stroke-dashoffset: 0;
     z-index:1;
 }
+
+
 /*svg#logo g#logo_grp path#cstroke1{
     stroke-dasharray: 1000;
     stroke-dashoffset: 0;
