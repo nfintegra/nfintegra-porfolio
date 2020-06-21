@@ -23,7 +23,6 @@ position: absolute;
 }
 
 #bgcirc{
-    transform: scale();
     transform-origin: 20% 20%;
     position: relative;
     z-index: 0;
@@ -56,8 +55,8 @@ position: absolute;
     z-index:1;
 }
 
-.rotatecir{
+#fillcir1 #fillcir2 #fillcir3 
+#strokecir1 #strokecir2 #strokecir3 .rotatecir{
     transform: rotate(0deg);
     transform-origin: 20% 22%;
 }
-
