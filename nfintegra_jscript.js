@@ -53,8 +53,17 @@ document.addEventListener('DOMContentLoaded',
     easing: 'linear',
     duration: '4500',
   }, '-=3000')
-  
 )
+
+anime({
+  targets: '.rotatecir',
+  rotate: {
+      value: 360,
+      duration: 10000,
+      easing: 'linear'
+  },
+  loop: true
+})
 
 /*
 let path = anime.path('#mpath path');

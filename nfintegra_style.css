@@ -55,7 +55,7 @@ position: absolute;
     z-index:1;
 }
 
-#cirgrp{
+.rotatecir{
     transform: rotate(0deg);
     transform-origin: 20% 22%;
 }
