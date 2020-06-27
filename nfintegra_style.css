@@ -55,8 +55,7 @@ position: absolute;
     z-index:1;
 }
 
-#fillcir1 #fillcir2 #fillcir3 
-#strokecir1 #strokecir2 #strokecir3 .rotatecir{
+#cirgrp{
     transform: rotate(0deg);
     transform-origin: 20% 22%;
 }

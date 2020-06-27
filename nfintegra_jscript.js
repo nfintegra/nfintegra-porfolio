@@ -3,32 +3,36 @@ const stroke1 = document.querySelector('svg#logo g#logo_grp path#cstroke1.cover_
 const stroke2 = document.querySelector('svg#logo g#logo_grp path#cstroke2.cover_stroke');
 const stroke3 = document.querySelector('svg#logo g#logo_grp line#lstroke3');
 
+const fillanimation = {
+  fill: ['rgba(255,255,255,0)', '#ffffff'],
+  easing: 'linear',
+};
+
 document.addEventListener('DOMContentLoaded', 
   ()=> anime.timeline({
 
   })
+  
   .add({
-    targets: '#fillcir1, #fillcir2, #fillcir3',
-    fill: ['rgba(255,255,255,0)', '#ffffff'],
-    easing: 'linear',
-    duration: '4250',
-  }) 
+    targets: '#fillgrp circle',
+    fillanimation,
+    delay: anime.stagger(1700),
+  }, 300)
 
   .add({
-    targets: '#strokecir1, #strokecir2, #strokecir3',
-    fill: ['rgba(255,255,255,0)', '#ffffff'],
+    targets: '#strokegrp circle',
     stroke: ['rgba(0,0,0,0)', '#000000'],
-    easing: 'linear',
-    duration: '3200',
-  },'-=200')
+    fillanimation,
+    delay: anime.stagger(1700),
+  }, 300)
 
   .add({
     targets: '#covercirc',
     strokeDashoffset: [anime.strokeDashoffset, -236],
-    easing: 'easeInOutQuad',
-    duration: '5400',
+    duration: '4500',
     easing: 'linear',
-  }) 
+  }, '-=3000') 
+
   .add({
     targets: stroke1,
     strokeDashoffset: [anime.strokeDashoffset, -82],
@@ -47,10 +51,10 @@ document.addEventListener('DOMContentLoaded',
     targets: stroke3,
     strokeDashoffset: [anime.strokeDashoffset, -82],
     easing: 'linear',
-    duration: '5000',
-  }, '-=2500')
+    duration: '4500',
+  }, '-=3000')
   
-);
+)
 
 /*
 let path = anime.path('#mpath path');
