@@ -59,3 +59,10 @@ position: absolute;
     transform: rotate(0deg);
     transform-origin: 20% 22%;
 }
+
+.navbar{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    display: inline;
+    float: right;
+}
