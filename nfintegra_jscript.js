@@ -1,14 +1,50 @@
+//Variables
 const covercirc = document.querySelector('svg#logo g#logo_grp path#covercirc');
 const stroke1 = document.querySelector('svg#logo g#logo_grp path#cstroke1.cover_stroke');
 const stroke2 = document.querySelector('svg#logo g#logo_grp path#cstroke2.cover_stroke');
-const stroke3 = document.querySelector('svg#logo g#logo_grp line#lstroke3');
-const projectbtn = document.querySelector('svg#logo g#logo_grp g#strokegrp circle#projectbtn')
+const stroke3 = document.querySelector('svg#logo g#logo_grp path#lstroke3');
+const projectbtn = document.querySelector('svg#logo g#logo_grp g#strokegrp circle#projectbtn');
+const nfgrp = document.querySelector('svg#logo g#logo_grp g#nf_grp');
 
 const fillanimation = {
   fill: ['rgba(255,255,255,0)', '#ffffff'],
   easing: 'linear',
 };
 
+var reverseTimeline = anime.timeline({ autoplay: false, easing: 'linear',
+direction: 'reverse'});
+
+reverseTimeline
+.add({
+  targets: stroke1,
+  strokeDashoffset: [anime.strokeDashoffset, -100],
+  duration: '2900',
+  }, 1000)
+  
+.add({
+  targets: stroke2,
+  strokeDashoffset: [anime.strokeDashoffset, -100],
+  duration: '2900',
+  }, 1000)
+
+.add({
+  targets: stroke3,
+  strokeDashoffset: [anime.strokeDashoffset, -100],
+  duration: '2900',
+  }, '-=500');
+
+/*var rotationloopcir = anime({
+  targets: '.rotatecir',
+  rotate: {
+      value: 360,
+      duration: 10000,
+      easing: 'linear'
+  },
+  loop: true
+}, 1050) 
+*/
+
+//Animations/ Animation Timeline
 document.addEventListener('DOMContentLoaded', 
   ()=> anime.timeline({
 
@@ -29,7 +65,7 @@ document.addEventListener('DOMContentLoaded',
 
   .add({
     targets: '#covercirc',
-    strokeDashoffset: [anime.strokeDashoffset, -236],
+    strokeDashoffset: [anime.strokeDashoffset, -170],
     duration: '4500',
     easing: 'linear',
   }, '-=3000') 
@@ -56,16 +92,8 @@ document.addEventListener('DOMContentLoaded',
   }, '-=3000')
 )
 
-var rotationloopcir = anime({
-  targets: '.rotatecir',
-  rotate: {
-      value: 360,
-      duration: 10000,
-      easing: 'linear'
-  },
-  loop: true
-}, 400)
 
+// Event Listeners
 projectbtn.addEventListener('mouseenter', () => {
   var btnScaleUp = anime({
     targets: '#projectbtn',
@@ -74,12 +102,45 @@ projectbtn.addEventListener('mouseenter', () => {
     easing: 'linear',
     duration: '250',
     autoplay: false,
-  })
+  });
+  
+  btnScaleUp.play();
+  reverseTimeline.play();
+
+  //rotationloopcir.pause();
+});
+
+/*
+  var nfreverse = anime.timeline({
+    strokeDashoffset: [anime.strokeDashoffset, -82],
+    easing: 'linear',
+    });
+  
+    nfreverse
+    .add({
+      targets: stroke1,
+      direction: 'reverse',
+      duration: '2900',
+      }, 1000)
+    
+    .add({
+    targets: stroke2,
+    direction: 'reverse',
+    duration: '2900',
+    }, 1000)
+
+    .add({
+    targets: stroke3,
+    direction: 'reverse',
+    duration: '4500',
+    }, '-=3000');
 
   btnScaleUp.play();
-  rotationloopcir.pause();
+  nfreverse.play();
+  //rotationloopcir.pause();
 
-})
+});
+
 
 projectbtn.addEventListener('mouseleave', () => {
   var btnScaleDown = anime({
@@ -92,126 +153,39 @@ projectbtn.addEventListener('mouseleave', () => {
     autoplay: false,
   })
 
+  anime.timeline({
+  })
+  
+  .add({
+    targets: '#nf_grp',
+    opacity: ['0,1'],
+    fill: ['#fff', '#000'],
+  })
+  
+  .add({
+    targets: ['#projects', '#pline', '#labelcir'],
+    opacity: ['1,0'],
+    stroke: ['#ffffff', '#ff0000']
+  })
+
   btnScaleDown.play();
   rotationloopcir.play();
 })
 
 
+projectbtn.addEventListener('click', () => 
+  anime.timeline({
+  })
+  
+ .add({
+  targets: '#nf_grp',
+  opacity: ['1,0'],
+  fill: ['#000', '#fff'],
+ })
 
 
-// rotateCircle();
-
-
-/*
 
 var rotationloopcir = anime({
-    targets: '.rotatecir',
-    rotate: {
-        value: 360,
-        duration: 10000,
-        easing: 'linear'
-    },
-    loop: true
-  }, 400)
-  
-projectbtn.addEventListener('mouseenter', () => {
-  btnScaleUp.play();
-  rotationloopcir.pause();
-})
-
-projectbtn.addEventListener('mouseleave', () => {
-  btnScaleUp.reverse();
-  rotationloopcir.play();
-});
-
-mouseIn();
-mouseOut();
-
-var mouse = {
-  x: undefined,
-  y: undefined
-}
-
-window.addEventListener('mousemove',  
-    function(event){
-      mouse.x = event.x;
-      mouse.y = event.y;
-})
-
-function rotateCircle() { 
-  anime({
-    targets: '.rotatecir',
-    rotate: {
-        value: 360,
-        duration: 10000,
-        easing: 'linear'
-    },
-    loop: true
-  }, 400)
-};
-
-function resumeBtnOverEvent() {
-  var btnoverevt = false;
-  var btnoverevt = projectbtn.addEventListener('mouseover', () => {
-    btnScaleUp.play;
-
-      if (btnoverevt == true){
-        rotateCirclecxa.pause();
-      } 
-  }) 
-
-  var btnoutevt = projectbtn.addEventListener('mouseout', () => {
-    btnScaleUp.reverse();
-      
-    if (btnoutevt == true){
-      rotateCircle();
-    } 
-  })
-};
-
-resumeBtnEvent();
-
-projectbtn.addEventListener('mouseover', () => {
-  btnScaleUp.play();
-})
-
-let btnScaleDwn = btnScaleUp.reverse();
-
-projectbtn.addEventListener('mouseout', () => {
-  btnScaleDwn
-})
-
-
-
-projectbtn.addEventListener('mouseout', () => {
-  btnScaleUp.reverse();
-})
-
-/*
-  btnScaleUp.reverse();
-
-function setUpEvents (){
-    
-  test.addEventlistener('click', buttonEnlarge);
-  
-  function buttonEnlarge() {
-    anime({
-      targets: '#projectBtn',
-      translateX: 0,
-      translateY: 11,
-      scale: (1.8),
-      stroke: ['.25', '0'],
-      fill: ['#ffffff', '#ff0000'],
-      autoplay: false,
-    }) 
-  };
-} 
-
-window.onload = function(){
-setUpEvents();
-}
-/*
-anime({
   targets: '.rotatecir',
   rotate: {
       value: 360,
@@ -219,11 +193,7 @@ anime({
       easing: 'linear'
   },
   loop: true
-}, 400)
-
-projectbtn.addEventlistener('click', btnenlrg);
-
-/*
+}, 1050)
 
 let path = anime.path('#mpath path');
 
